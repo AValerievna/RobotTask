@@ -1,13 +1,8 @@
 *** Settings ***
-Documentation    Suite description
+Library           APIWorkerLibrary.py
 
 *** Test Cases ***
-Test title
-    [Tags]    DEBUG
-    Provided precondition
-    When action
-    Then check expectations
+Success
+    request get
+    check response  200
 
-*** Keywords ***
-Provided precondition
-    Setup system under test

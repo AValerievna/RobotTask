@@ -3,7 +3,7 @@ import base64
 import requests
 
 
-class APIWork(object):
+class APIWorker(object):
     BASE_URL = "http://httpbin.org/"
     GET = "get"
     STREAM = "stream/%d"

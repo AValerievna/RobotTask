@@ -2,11 +2,11 @@
 Test Template     Success code
 Library           Libraries/APIWorkerLibrary.py
 
-*** Test Cases ***  Expected    Headername  Headervalue
-Success test        200 Head   Val
+*** Test Cases ***
+Suc     [Template]  Temp1   100     head    val
+Success test    [Template]  Temp2   200 Head   Val
 
-Failing [Template]  Should fail
-        some        400
+Failing     [Template]     Should fail     some        400
 
 
 *** Keywords ***

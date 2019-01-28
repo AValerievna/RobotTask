@@ -22,5 +22,15 @@ class APIWorkerLibrary(object):
     def get_resp_status_code_str(self):
         return str(self._res_resp.status_code)
 
-    def get_resp_header_str(self):
-        return self._res_resp.header
+    def get_resp_header_str(self, header_name):
+        return self._res_resp.json()['headers'][header_name]
+
+    def get_resp_auth_str(self):
+        return self._res_resp.json()['authenticated']
+
+    def get_resp_user_str(self):
+        return self._res_resp.json()['user']
+
+    def get_resp_line_count_str(self):
+        sum(chunk.count('\n')
+            for chunk in iter(lambda: self._res_resp.json(), ''))

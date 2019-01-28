@@ -4,7 +4,7 @@ import requests
 class APIWorker(object):
     BASE_URL = "http://httpbin.org/"
     GET = "get"
-    STREAM = "stream/%d"
+    STREAM = "stream/%s"
     BASIC_AUTH = "basic-auth/%s/%s"
     COLON = ":"
     AUTHORIZATION = "Authorization"

@@ -19,8 +19,6 @@ class APIWorker(object):
     def request_stream(self, number):
         return requests.get(self._base_url + self.STREAM % number)
 
-    def request_basic_auth(self, valid_usr, valid_pswd, actual_usr, actual_pswd):
-        return requests.get(self._base_url + self.BASIC_AUTH % (valid_usr, valid_pswd), auth=(actual_usr, actual_pswd))
-        # authHeader = base64.b64encode(bytes(actaul_usr + self.COLON + actual_pswd, 'utf-8'))
-        # return requests.get(self._base_url + self.BASIC_AUTH % (valid_usr, valid_pswd), headers=
-        # {self.AUTHORIZATION: self.BASIC + authHeader})
+    def request_basic_auth(self, valid_usr, valid_password, actual_usr, actual_password):
+        return requests.get(self._base_url + self.BASIC_AUTH % (valid_usr, valid_password),
+                            auth=(actual_usr, actual_password))

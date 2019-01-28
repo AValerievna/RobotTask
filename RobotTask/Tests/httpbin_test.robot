@@ -18,10 +18,7 @@ Auth fail     [Template]  Auth fail test
 
 Stream success     [Template]  Stream success test
     200  5
-    200  100
-
-Failing     [Template]     Should fail
-    some        400
+    200  50
 
 
 *** Keywords ***

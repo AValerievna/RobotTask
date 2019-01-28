@@ -3,8 +3,8 @@ Test Template     Success code
 Library           Libraries/APIWorkerLibrary.py
 
 *** Test Cases ***
-Suc     [Template]  Temp1   100     head    val
-Success test    [Template]  Temp2   200 Head   Val
+Suc     [Template]  Success code   100     head    val
+Success test    [Template]  Success code   200 Head   Val
 
 Failing     [Template]     Should fail     some        400
 

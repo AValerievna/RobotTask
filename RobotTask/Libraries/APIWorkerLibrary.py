@@ -1,4 +1,4 @@
-from ..Project.APIWorker import APIWorker
+from Project.APIWorker import APIWorker
 
 
 class APIWorkerLibrary(object):
@@ -16,5 +16,5 @@ class APIWorkerLibrary(object):
         self._res_resp = self._api_worker.request_basic_auth(valid_usr, valid_pswd, actaul_usr, actual_pswd)
 
     def check_response(self, expected):
-        if self._res_resp.status_code != expected:
-            raise AssertionError('%s != %s' % (self._res_resp, expected))
+        if str(self._res_resp.status_code) != expected:
+            raise AssertionError('%s != %s' % (self._res_resp.status_code, expected))

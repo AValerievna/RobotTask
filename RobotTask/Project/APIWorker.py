@@ -10,7 +10,7 @@ class APIWorker(object):
     BASIC_AUTH = "basic-auth/%s/%s"
     COLON = ":"
     AUTHORIZATION = "Authorization"
-    BASIC = "Basic ";
+    BASIC = "Basic "
 
     def __init__(self):
         self._base_url = self.BASE_URL
